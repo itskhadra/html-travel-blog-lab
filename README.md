@@ -1,82 +1,109 @@
-# Lab: HTML 
+### Lab: CSS Fundamentals
 
-For this lab, imagine you are creating a travel blog and want to build a webpage showcasing your recent trip to Fire Island. You will need to include the following pieces on your webpage:
+**Estimate Completed Time: 30-60 min.**
 
-* Webpage Title: "Adventures in Fire Island"
-* Hero Section: Include a large banner image showcasing the park's scenery (use <img> tag with appropriate attributes).
-* Blog Post Summary: Write a short paragraph using <p> tags describing your experience and highlights of the trip.
-* Image Gallery: Include a section with multiple images from your trip. Here are two options:
-  * Use unordered lists (<ul>) and list items (<li>) with images (<img> tags) within each list item.
-* Call to Action: Add a section with a link using the <a> tag, encouraging readers to explore the park themselves (e.g., "Plan your National Park adventure today!").
+#### Overview
+As a junior web developer at a creative design agency, you've been assigned to improve the user interface of a client's portfolio website. The website has basic HTML structure but lacks visual appeal. Your task is to enhance the look and feel of the website using advanced CSS techniques learned in this module.
 
-## Tools and Resources
+This lab will assess your ability to apply CSS selectors, properties, values, positioning, layout, and responsive design. You'll create a visually engaging and user-friendly webpage that showcases the client's work.
 
-* VSCode
-* [GitHub Repo](https://github.com/learn-co-curriculum/html-travel-blog-lab)
-* MDN: HTML
+#### Tools and Resources
+- VSCode (or any code editor)
+- Web browser for testing
+- GitHub repository ((https://github.com/learn-co-curriculum/phase-0-js-css-fundamentals-lab.git))
+- Node.js installed
 
-## Setup Steps
+**Instructions:**
 
-### Lab Setup 1: Fork Lab Repository
+1. **Fork and Clone the Repository**
+   - Fork the provided GitHub repository to your account.
+   - Clone the forked repository to your local machine.
+   - Navigate to the project directory and run `npm install` to set up the project dependencies.
+   - Run `npm test` to test your code and open the `index.html` file in a web browser to view the changes. You need to save the file and refresh your browser to see the changes.
 
-Fork the [GitHub lab repository](https://github.com/learn-co-curriculum/html-travel-blog-lab) provided to your own GitHub account. This will create a personal copy of the repository, which is necessary to submit the assignment.
+2. **Analyze and Plan**
+   - Review the provided HTML structure in the `index.html` file.
+   - Define your styling goals for the following elements: 
+     - Navigation bar
+     - Portfolio items
+     - Footer
 
-### Lab Setup 2: Clone the Lab Repository with Git
+3. **Create and Link CSS File**
+   - Create a new file named `style.css` in the project directory.
+   - Link the CSS file in the `index.html` file within the `<head>` section.
 
-1. Clone the forked repository to your local machine using Git. After navigating to the folder where you would like to keep your work, use the command `git clone` followed by the ssh link of your own repository on Github.
-2. Use the `cd` command to move into the directory/folder of the lab you just cloned.
-3. Use the `ls` command to see what files and folders you have in your current directory.
-4. Use the `code .` command to open up the local repo in VSCode.
+4. **Style the Navigation Bar**
+   - Target the navigation bar using a class selector.
+     - Set the background color to `#333`.
+     - Set the font size to `1.2em`.
+     - Add padding of `1em`.
+     - Center-align the text.
+     - Set the position to `fixed`.
+     - Set the width to `100%`.
+     - Set the top to `0`.
+     - Set the z-index to `1000`.
+   - For the unordered list within the navigation bar:
+     - Set the list-style to `none`.
+     - Set the margin to `0`.
+     - Set the padding to `0`.
+   - For each list item in the navigation bar:
+     - Set them to display `inline`.
+     - Add margin of `0 1em`.
+   - Style the anchor tags within the list items:
+     - Set the text color to `#fff`.
 
-## Instructions
+5. **Style the Main Content**
+   - Add padding to the top of the main content to ensure it is not hidden behind the fixed navigation bar.
+     - Set `padding-top` to `5em`.
+   - For each section within the main content:
+     - Add padding of `2em 1em`.
+     - Center-align the text.
+   - For the home section:
+     - Increase the font size of the main heading to `2.5em`.
+     - Add margin-bottom of `0.5em`.
+     - Set the paragraph font size to `1.2em`.
+     - Set the paragraph color to `#666`.
 
-### Task 1: Initial Preparation
+6. **Style the Portfolio Section**
+   - Use a flexbox layout for the portfolio container:
+     - Set display to `flex`.
+     - Set `flex-wrap` to `wrap`.
+     - Justify content to space items around the container.
+     - Add padding of `1em`.
+   - Style each portfolio item:
+     - Set the background color to `#fff`.
+     - Add a border of `1px solid #ddd`.
+     - Add margin of `1em` around each item.
+     - Add padding of `1em` on all sides.
+     - Apply a box shadow with the value `0 4px 8px rgba(0, 0, 0, 0.1)`.
+     - Set the width to `30%`.
+     - Set `box-sizing` to `border-box`.
+     - Apply a transition for the transform property with a duration of `0.3s`.
+   - Style the headings within the portfolio items:
+     - Make the text bold.
+     - Add margin-bottom of `0.5em`.
+   - Style the paragraphs within the portfolio items:
+     - Add margin-bottom of `0.5em`.
+     - Set the color to `#666`.
+   - Style the images within the portfolio items:
+     - Set the width to `100%`.
+     - Apply a box shadow with the value `0px 2px 5px rgba(0, 0, 0, 0.1)`.
 
-1. Navigate to the provided GitHub repository.
-2. An HTML file called `index.html` is provided in the repo.
+7. **Add Hover Effect for Portfolio Items**
+   - Apply a scaling transformation to portfolio items when hovered over:
+     - Set the transform property to `scale(1.05)` on hover.
 
-### Task 2: Basic HTML Structure
+8. **Style the Footer**
+   - Target the footer using an ID selector:
+     - Set the background color to `#222`.
+     - Set the text color to `#fff`.
+     - Add padding of `2em`.
+     - Center-align the text.
+     - Set the position to `relative`.
+     - Set the bottom to `0`.
+     - Set the width to `100%`.
 
-Write the basic HTML structure with `<DOCTYPE>`, `<html>`, `<head>`, `<title>`, and `<body>` sections.
-
-### Task 3: Hero Section
-
-Build the Hero Section:
-1. Within the `<body>`, add an appropriate heading tag (e.g., `<h1>`) for the webpage title.
-2. Include an `<img>` tag with a large banner image representing the national park. Ensure you set the `src` attribute to the image filename and provide a descriptive `alt` text attribute.
-
-### Task 4: Blog Post Summary
-
-Create a Blog Post Summary:
-* Use one or more `<p>` tags to write a concise paragraph summarizing your travel experience and highlighting key features of the park.
-
-### Task 5: Image Gallery
-
-Build out the Image Gallery:
-1. Create an `<h2>` tag for the title with the text "Gallery: Fire Island".
-2. Include a `<ul>` element.
-3. Within the `<ul>`, use `<li>` tags for each image in your gallery.
-4. Inside each `<li>` tag, add an `<img>` tag with the image source (`src`) and alt text attribute.
-
-### Task 6: Call to Action
-
-Build the Call to Action Section:
-1. Add a section with a heading tag (e.g., `<h3>`) like "Explore the Adventure!"
-2. Include a paragraph (`<p>`) encouraging readers to visit the park.
-3. Use an `<a>` tag to create a link to a relevant webpage (e.g., [the National Park Service website for Fire Island](https://www.nps.gov/fiis/index.htm)).
-
-## Important 
-
-Before you submit your solution, you need to save your progress with git.
-1. Add your changes to the staging area by executing `git add .`
-2. Create a commit by executing `git commit -m "Your commit message"`
-3. Push your commits to GitHub by executing `git push origin main` or `git push origin master`, depending on the name of your branch (use `git branch` to check on which branch you are).
-
-## Submission and Grading Criteria
-
-1. Use the rubric in Canvas as a guide for how this lab is graded.
-2. Your submission will be automatically scored in CodeGrade, using the most recent commit. Remember to make sure you have pushed your commit to GitHub before submitting your assignment. Please note, you have two attempts to submit, and all criterion must be met to pass the AutoTest. 
-3. You can review your submission in CodeGrade and see your final score in your Canvas gradebook.
-4. When you are ready to submit, click the Load Lab: HTML button below to launch CodeGrade.
-  * Click on + Create Submission. Connect your repository for this lab.
-  * For additional information on submitting assignments in CodeGrade: Getting Started in Canvas
+9. **Organize and Test**
+    - Save your CSS file.
+    - Open the `index.html` file in a web browser to view the changes.
+    - Ensure all the tests are passing.
